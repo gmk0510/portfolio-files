@@ -1,17 +1,17 @@
 <template>
   <footer id="footer">
     <div class="footerContents">
-      <div class="logo">HULAN</div>
+      <div class="logo">XXXXX</div>
       <div class="footer-contents">
         <div class="contLeft">
-          <div class="footer-content">(주)휴랜 대표자 | 김춘상 사업자 번호 | 761-87-01070 <br /> | 032-719-8962</div>
+          <div class="footer-content">(주)XX 대표자 |  사업자 번호 | xxx-xx-01070 <br /> | 032-xxx-xxxx</div>
           <div class="footer-content">TEL / 1666-3313</div>
-          <div class="footer-content">Fax | 032-710-8962 Kakao | Safe114</div>
-          <div class="footer-content">Email | hulan@hulan.co.kr</div>
+          <div class="footer-content">Fax | 032-xxx-xxxx Kakao | xxxxx</div>
+          <div class="footer-content">Email | xxxx@xxxxx.co.kr</div>
         </div>
         <div class="contRight">
-          <div class="footer-content address">주소 | 인천광역시 연수구 인천타워대로 99, 애니오션빌딩 9층</div>
-          <div class="footer-content address">B-9F 99, Incheon tower-daero, Yeonsu-gu, Incheon</div>
+          <div class="footer-content address">주소 | 인천광역시 연수구 XXXXX 99, XXXXX 9층</div>
+          <div class="footer-content address">B-9F 99, Incheon XXXX-XXX, 구민규만듬</div>
         </div>
       </div>
     </div>

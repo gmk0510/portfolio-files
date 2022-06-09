@@ -2,7 +2,7 @@
   <div id="work">
       <div class="work_wrap">
         <div class="titleBx">
-          <span class="titleMain">SMART</span><span class="titleSub">Accessory</span> 
+          <span class="titleMain">SMART</span><span class="titleSub">Work</span> 
         </div>
         <div class="work_bx">
 
@@ -33,7 +33,7 @@
             </div>
           </div>
 
-          <div class="work_col">
+          <div class="work_col media-700-del">
             <div class="work_col_bx" v-on:click="[showImg5(), show_background()]">
               <div class="img_bx">
                 <img src="@/assets/work/5_인천 구월 A-3BL 공공임대주택.jpg" alt="">
@@ -60,7 +60,7 @@
             </div>
           </div>
 
-          <div class="work_col">
+          <!-- <div class="work_col">
             <div class="work_col_bx" v-on:click="[showImg9(), show_background()]">
               <div class="img_bx">
                 <img src="@/assets/work/9_영천 조교동 민간임대주택.jpg" alt="">
@@ -85,7 +85,7 @@
               </div>
               <div class="title">아산 스마트밸리 C-2BL 아파트</div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -132,7 +132,7 @@
           </div>
         </div>
 
-        <div class="show_img_bx" :class="{'active': img9}">
+        <!-- <div class="show_img_bx" :class="{'active': img9}">
           <div class="img_bx9">
             <img src="@/assets/work/9_영천 조교동 민간임대주택.jpg" alt="">
           </div>
@@ -151,7 +151,7 @@
           <div class="img_bx12">
             <img src="@/assets/work/12_아산 스마트밸리 C-2BL 아파트.jpg" alt="">
           </div>
-        </div>
+        </div> -->
 
         
         <div class="show_img_background" :class="{'active': img_background}" v-on:click="closeImg1"></div>
@@ -312,6 +312,7 @@ img {
   .work_bx {
     flex-direction: column;
   }
+  .media-700-del{display: none;}
 }
 @media screen and (min-width: 700px) {
   .img_bx1, .img_bx2, .img_bx3, .img_bx4, .img_bx5, .img_bx6, .img_bx7, .img_bx8, .img_bx9, .img_bx10, .img_bx11, .img_bx12 {

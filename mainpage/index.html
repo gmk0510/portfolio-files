@@ -60,25 +60,27 @@
                 </div>
             </section>
 
-            <section class="portfolio">
-                <div class="scene">
-                  <div class="card">
-                    <div class="card__face card__face--front">front</div>
-                    <div class="card__face card__face--back">back</div>
-                  </div>
+            <section id="portfolio">
+                <div class="portf_3d">
+                    <div class="scene">
+                        <div onclick="clickCard(1)" class="card card1">
+                          <div class="card__face card__face--front">front</div>
+                          <div class="card__face card__face--back">back</div>
+                        </div>
+                      </div>
+                    <div class="scene">
+                        <div onclick="clickCard(2)" class="card card2">
+                            <div class="card__face card__face--front">front</div>
+                            <div class="card__face card__face--back">back</div>
+                        </div>
+                    </div>
+                    <div class="scene">
+                        <div onclick="clickCard(3)" class="card card3">
+                            <div class="card__face card__face--front">front</div>
+                            <div class="card__face card__face--back">back</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="scene">
-                    <div class="card">
-                      <div class="card__face card__face--front">front</div>
-                      <div class="card__face card__face--back">back</div>
-                    </div>
-                  </div>
-                  <div class="scene">
-                    <div class="card">
-                      <div class="card__face card__face--front">front</div>
-                      <div class="card__face card__face--back">back</div>
-                    </div>
-                  </div>
             </section>
 
             <!-- form -->
@@ -106,6 +108,7 @@
     </div>
 
     <script>
+        // toggle navbar
         var toggleBtn = document.querySelector('.toggle_btn');
         window.addEventListener('scroll', ()=>{
             document.querySelector('#header').classList.toggle('active', scrollY > 30);
@@ -127,11 +130,10 @@
 
 
 
-
-        var card = document.querySelector('.card');
-        card.addEventListener( 'click', function() {
-          card.classList.toggle('is-flipped');
-        });
+        // portfolio -3d card effact
+        function clickCard(num) {
+            document.querySelector(`.card${num}`).classList.toggle('is-flipped');
+        }
     </script>
 </body>
 </html>

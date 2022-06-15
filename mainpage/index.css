@@ -13,7 +13,7 @@ a {
 
 }
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     background: #000;
 }
 .neonText {
@@ -202,6 +202,14 @@ html {
 }
 
 /* portfolio */
+#portfolio {
+    margin: 10% 0;
+}
+#portfolio .portf_3d {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
+}
 .scene {
   width: 200px;
   height: 260px;
@@ -235,6 +243,13 @@ html {
   background-color: SteelBlue;
   transform: rotateY(180deg);
 }
+
+
+
+
+
+
+
 
 
 

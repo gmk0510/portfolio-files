@@ -26,7 +26,7 @@ html {
     0 0 92px #f09,
     0 0 102px #f09,
     0 0 151px #f09;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .neonTextBlue {
@@ -39,7 +39,19 @@ html {
     0 0 90px rgb(13, 0, 255),
     0 0 100px rgb(13, 0, 255),
     0 0 150px rgb(13, 0, 255);;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.neonTextGreen {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #0fa,
+    0 0 80px #0fa,
+    0 0 90px #0fa,
+    0 0 100px #0fa,
+    0 0 150px #0fa;
 }
 
   
@@ -116,14 +128,28 @@ html {
     0 0 100px rgb(13, 0, 255),
     0 0 150px rgb(13, 0, 255);
 }
+/* media 900 */
+.toggle_btn {
+    position: fixed;
+    right: 2%;
+    top: 4%;
+    transform: translateY(-50%);
+    z-index: 200;
+    display: none;
+    cursor: pointer;
+}
+.toggle_btn:hover {
+    animation: flicker 1.5s infinite alternate;  
+}
+.toggle_bx {
+    display: none;
+}
+
 
 /* home */
 #home {
     height: 100vh;
-    background-image: url('./images/background3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: center / cover no-repeat url("./images/background3.png");
 }
 #home .home_box{
     position: absolute;
@@ -146,10 +172,16 @@ html {
 }
 
 /* introduce */
+#introduce {
+    padding-top: 3%;
+    position: relative;
+    background: center / cover no-repeat url("./images/background.jpg");
+}
 #introduce .intr_box {
-    width: 60%;
+    max-width: 1200px;
     margin: auto;
-    margin-top: 10%;
+    padding-top: 10%;
+    text-align: center;
 }
 
 #introduce .intr_box .intr {
@@ -157,8 +189,51 @@ html {
     0 0 4px #fff,
     0 0 20px rgb(13, 0, 255),
     0 0 50px rgb(13, 0, 255);
-    margin-top: 10%;
-    padding: 3%;
+    margin: 10% 0%;
+    padding: 5% 3%;
+    letter-spacing: 2px;
+    line-height: 3rem;
+    border-radius: 10px;
+}
+
+#introduce .intr_box .intr__title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* portfolio */
+.scene {
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;  
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  line-height: 260px;
+}
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+.card__face--front {
+  background-color: Tomato;
+}
+
+.card__face--back {
+  background-color: SteelBlue;
+  transform: rotateY(180deg);
 }
 
 
@@ -166,6 +241,27 @@ html {
 
 
 
+/* footer */
+#footer {
+    background-image: url('./images/footerImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 20vh;
+    object-fit: cover;
+}
+#footer .footer_box {
+    display: flex;
+    justify-content: space-between;
+}
+#footer .footer_box div{
+    margin: 2%;
+    width: 100%;
+}
+#footer .right {
+    text-align: right;
+    padding: 0% 2%;
+}
 
 
 /* animation */
@@ -260,4 +356,29 @@ html {
     20%, 24%, 55% {        
         text-shadow: none;
     }    
+}
+
+@media screen and (max-width: 900px) {
+    .toggle_btn {
+        display: block;
+    }
+    #header {
+        flex-direction: column;
+        top: -100%;
+        border-radius: 0 0 5px 5px;
+    }
+    #header.active_down {
+        top: 0;
+    }
+    .nav {
+        height: 80vh;
+        flex-direction: column;
+        padding: 10%;
+    }
+    h2 {
+        display: none;
+    }
+    .toggle_bx {
+        display: block;
+    }
 }

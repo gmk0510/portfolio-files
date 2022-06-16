@@ -173,11 +173,12 @@ html {
 
 /* introduce */
 #introduce {
-    padding-top: 3%;
+    padding: 3% 0;
     position: relative;
     background: center / cover no-repeat url("./images/background.jpg");
 }
 #introduce .intr_box {
+    width: 70%;
     max-width: 1200px;
     margin: auto;
     padding-top: 10%;
@@ -207,13 +208,15 @@ html {
 }
 #portfolio .portf_3d {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 10%;
 }
 .scene {
-  width: 200px;
-  height: 260px;
+  width: 400px;
+  height: 460px;
   perspective: 600px;
+  margin: 3%;
 }
 .card {
   width: 100%;
@@ -227,25 +230,80 @@ html {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;  
-  color: #fff;
   text-align: center;
   font-size: 2em;
-  line-height: 260px;
+  line-height: 2.6rem;
 }
 .card.is-flipped {
   transform: rotateY(180deg);
 }
 .card__face--front {
-  background-color: Tomato;
+  background-color: rgb(3, 3, 3);
 }
 
 .card__face--back {
-  background-color: SteelBlue;
   transform: rotateY(180deg);
 }
-
-
-
+.card1 {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #f09;
+}
+.card1.is-flipped {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #f09,
+    0 0 42px #f09,
+    0 0 61px #f09;
+}
+.card2 {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #0fa;
+}
+.card2.is-flipped {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #0fa,
+    0 0 42px #0fa,
+    0 0 61px #0fa;
+}
+.card3 {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px rgb(13, 0, 255);
+}
+.card3.is-flipped {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px rgb(13, 0, 255),
+    0 0 42px rgb(13, 0, 255),
+    0 0 61px rgb(13, 0, 255);
+}
+.front_text {
+    margin: 10% 0;
+    font-size: 1.5rem;
+}
+.click_btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.click_btn:hover {
+    animation: flickerAll 3s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+.links {
+    font-size: 1.3rem;
+}
 
 
 
@@ -372,6 +430,30 @@ html {
         text-shadow: none;
     }    
 }
+@keyframes flickerAll {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 94, 0),
+        0 0 80px rgb(255, 94, 0),
+        0 0 90px rgb(255, 94, 0),
+        0 0 100px rgb(255, 94, 0),
+        0 0 150px rgb(255, 94, 0);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+
+
+
 
 @media screen and (max-width: 900px) {
     .toggle_btn {

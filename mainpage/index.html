@@ -63,7 +63,7 @@
             <section id="portfolio">
                 <div class="portf_3d">
                     <div class="scene">
-                        <div onclick="clickCard(1)" class="card card1 neonText">
+                        <div onclick="clickCard(1)" class="card card1 neonText smalNeonText">
                           <div class="card__face card__face--front">
                             <div class="skills">
                                 HTML<br />CSS<br />JavaScript
@@ -84,7 +84,7 @@
                         </div>
                       </div>
                     <div class="scene">
-                        <div onclick="clickCard(2)" class="card card2 neonTextGreen">
+                        <div onclick="clickCard(2)" class="card card2 neonTextGreen smalNeonTextGreen">
                             <div class="card__face card__face--front">
                                 <div class="skills">
                                     Vue 
@@ -102,13 +102,17 @@
                         </div>
                     </div>
                     <div class="scene">
-                        <div onclick="clickCard(3)" class="card card3 neonTextBlue">
+                        <div onclick="clickCard(3)" class="card card3 neonTextBlue smalNeonTextBlue">
                             <div class="card__face card__face--front">
                                 <div class="skills">
                                     React
                                 </div>
                                 <div class="front_text">
                                     <div class="texts">공부중입니당</div>   
+                                    <div class="texts">state</div>   
+                                    <div class="texts">props</div>   
+                                    <div class="texts">components</div>   
+                                    <div class="texts">data binding</div>   
                                 </div>
                                 <div class="click_btn">클릭해주세요!</div>
                             </div>
@@ -118,25 +122,43 @@
                 </div>
             </section>
 
-            <section id="skill">
+            <section id="skills">
                 <div class="web_skills">
                     <div class="skill skill_html">
-                        <div class="skill_Bx">
-                            <img src="./images/html-black.png" alt="">
+                        <div class="skill_bx">
+                            <img src="./images/html.jpeg" alt="html-img">
                         </div>
-                        <div class="skill_text">ds</div>
+                        <div class="skill_text">
+                            <div class="skill_text_bx">
+                                <div class="skill_text_line">semantic 태그를 알고있고,</div>
+                                <div class="skill_text_line">img의 alt와 제목태그인 h1~h6의 중요성</div>
+                                <div class="skill_text_line">크로스 브라우징, 콘텐츠 최적화에 대해 알고있습니다</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill skill_css">
-                        <div class="skill_text">ds</div>
-                        <div class="skill_Bx">
-                            <img src="./images/css-black.png" alt="">
+                    <div class="skill skill_css neonTextBlue">
+                        <div class="skill_text">
+                            <div class="skill_text_bx">
+                                <div class="skill_text_line">포지셔닝 display 속성들과 block, inline element의 각 특징들을 알며,</div>
+                                <div class="skill_text_line">그것들을 사용해 짧고 간단하게 다양한 레이아웃들을 구현할 수 있습니다.</div>
+                                <div class="skill_text_line">또한 CSS박스 모델과 반응형웹을 많이 만들어봤습니다.</div>
+                            </div>
+                        </div>
+                        <div class="skill_bx">
+                            <img src="./images/css.png" alt="css-img">
                         </div>
                     </div>
                     <div class="skill skill_js">
-                        <div class="skill_Bx">
-                            <img src="./images/javascript-logo-black-and-white.png" alt="">
+                        <div class="skill_bx">
+                            <img src="./images/js.png" alt="js-img">
                         </div>
-                        <div class="skill_text">ds</div>
+                        <div class="skill_text">
+                            <div class="skill_text_bx">
+                                <div class="skill_text_line">기본적인 함수나 연산자 객체 조건문 등에 대해 알고있습니다.</div>
+                                <div class="skill_text_line">관련 라이브러리나 api를 사용경험이 있습니다.</div>
+                                <div class="skill_text_line">vue 나 react의 기본적인 코드를 읽을 수 있습니다.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="certificate">
@@ -171,22 +193,21 @@
     <script>
         // toggle navbar
         var toggleBtn = document.querySelector('.toggle_btn');
+        var header = document.querySelector('#header');
         window.addEventListener('scroll', ()=>{
-            document.querySelector('#header').classList.toggle('active', scrollY > 30);
+            header.classList.toggle('active', scrollY > 30);
         });
 
         window.addEventListener('scroll', ()=>{
             document.querySelector('#home').classList.toggle('active', scrollY > 30);
         });
-
         function link_toggle() {
             toggleBtn.classList.toggle('fa-bars-staggered');
-            document.querySelector('#header').classList.toggle('active_down');
+            header.classList.toggle('active_down');
         }
-
         toggleBtn.addEventListener('click', ()=>{
             toggleBtn.classList.toggle('fa-bars-staggered');
-            document.querySelector('#header').classList.toggle('active_down');
+            header.classList.toggle('active_down');
         });
 
 

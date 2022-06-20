@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 
 }
+img {
+    display: block;
+    max-width: 100%;
+}
 html {
     scroll-behavior: smooth;
     background: #000;
@@ -53,8 +57,28 @@ html {
     0 0 100px #0fa,
     0 0 150px #0fa;
 }
+.smalNeonText {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #f09;
+}
+.smalNeonTextGreen {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #0fa;
+}
+.smalNeonTextBlue {
+    box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px rgb(13, 0, 255);
+}
 
-  
+
+
+
 /* header */
 #header {
     position: fixed;
@@ -244,11 +268,9 @@ html {
 .card__face--back {
   transform: rotateY(180deg);
 }
-.card1 {
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 22px #f09;
+.card1 .card__face--front{
+    
+    background-image: linear-gradient(to right, #e9d842, #b20a2c);
 }
 .card1.is-flipped {
     box-shadow:
@@ -258,11 +280,8 @@ html {
     0 0 42px #f09,
     0 0 61px #f09;
 }
-.card2 {
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 22px #0fa;
+.card2 .card__face--front{
+    background-image: linear-gradient(120deg, #b9f52f 0%, #0ee92b 100%);
 }
 .card2.is-flipped {
     box-shadow:
@@ -272,11 +291,8 @@ html {
     0 0 42px #0fa,
     0 0 61px #0fa;
 }
-.card3 {
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 22px rgb(13, 0, 255);
+.card3 .card__face--front{
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 .card3.is-flipped {
     box-shadow:
@@ -306,27 +322,81 @@ html {
 }
 
 /* skill */
-#skill {
-    background-color: #130f40;
+#skills {
     background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    padding: 2% 0;
 }
-#skill .web_skills .skill {
-    width: 400px;
+#skills .web_skills {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-#skill .web_skills .skill .skill_Bx {
-    background: rgba(255, 255, 255, 0.07);
-}
-#skill .web_skills .skill .skill_Bx img {
-    max-width: 100%;
-}
-#skill .web_skills .skill {
+#skills .web_skills .skill {
     display: flex;
+    margin: 10% 0;
+    font-size: 1.4rem;
 }
-#skill .web_skills .skill div{
+#skills .web_skills .skill .skill_text {
+    flex: 2;
+}
+#skills .web_skills .skill .skill_bx {
     flex: 1;
 }
-
-
+#skills .web_skills .skill .skill_bx img{
+    width: 300px;
+    margin: 0 auto;
+}
+#skills .web_skills .skill .skill_text .skill_text_bx{
+    padding: 7% 0 7% 7%;
+    line-height: 2.3rem;
+}
+.skill_js .skill_bx img{width: 170px !important;}
+.skill_js .skill_text_bx {
+    padding: 0 0 0 7%!important
+}
+.skill_js {
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px rgb(229, 255, 0),
+    0 0 80px rgb(229, 255, 0),
+    0 0 90px rgb(229, 255, 0),
+    0 0 100px rgb(229, 255, 0),
+    0 0 150px rgb(229, 255, 0);
+    box-shadow: 
+    0 0 4px #fff,
+    0 0 10px rgb(229, 255, 0);
+    font-size: 1.2rem;
+    background-color: #b5c327;
+    background-image: linear-gradient(315deg, #b5c327 0%, #ffc907 74%);
+    border-radius: 2rem;
+    padding: 7%;
+}
+.skill_html {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px rgb(255, 94, 0),
+    0 0 80px rgb(255, 94, 0),
+    0 0 90px rgb(255, 94, 0),
+    0 0 100px rgb(255, 94, 0),
+    0 0 150px rgb(255, 94, 0);
+    box-shadow: 
+    0 0 4px #fff,
+    0 0 10px rgb(255, 94, 0);
+    font-size: 1.2rem;
+    background-image: linear-gradient(to right, #ff9966, #ff5e62);
+    border-radius: 2rem;
+}
+.skill_css {
+    box-shadow: 
+    0 0 4px #fff,
+    0 0 10px rgba(110,123,251,1);
+    background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+    border-radius: 2rem;
+}
 
 
 

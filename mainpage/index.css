@@ -417,6 +417,85 @@ html {
     background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
     border-radius: 2rem;
 }
+/* certificate */
+.smalNeonText-darkturquoise {
+    box-shadow: 
+    0 0 1px #fff,
+    0 0 3px #fff,
+    0 0 3px darkturquoise,
+    0 0 5px darkturquoise;
+}
+.neonText-darkturquoise {
+    text-shadow: 
+    0 0 1px #fff,
+    0 0 1px darkturquoise,
+    0 0 3px darkturquoise;
+}
+.certificate .cert-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 40px rgb(0, 225, 255),
+    0 0 80px rgb(0, 225, 255);
+}
+.certificate .cert_bx {
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.certificate .cert_bx .cert_card {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.certificate .cert_bx .cert_card i {
+    position: absolute;
+    top: 10px; right: 10px;
+    transition: .3s;
+}
+.certificate .cert_bx .cert_card .circle {
+    position: absolute;
+    top: -20%; right: -20%;
+    border-radius: 100%;
+    width: 200px; height: 200px; 
+    transition: .3s;
+}
+.web-design .circle {
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+.information-processing .circle {
+    background-color: #7a7adb;
+    background-image: linear-gradient(315deg, #7a7adb 0%, #36242e 74%);
+}
+.information-equipment .circle{
+    background-color: #2234ae;
+    background-image: linear-gradient(315deg, #2234ae 0%, #49453e 74%);    
+}
+.certificate .cert_bx .cert_card:hover .circle {
+    width: 1000px; height: 1000px;
+}
+.certificate .cert_bx .cert_card .text_bx {
+    position: relative;
+}
+.cert1.active i, .cert2.active i, .cert3.active i{
+    transform: rotate(180deg);
+    transition: .3s;
+}
+.cert1.active .circle, .cert2.active .circle, .cert3.active .circle {
+    width: 500px !important;
+    height: 500px !important;
+    border-radius: 1px !important;
+}
+
 
 /* form */
 #form {

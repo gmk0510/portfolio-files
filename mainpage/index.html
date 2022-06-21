@@ -161,8 +161,38 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="certificate">
-                    
+                    <div class="cert-title">보유 자격증</div>
+                    <div class="cert_bx neonText-darkturquoise">
+                        <div class="cert_card web-design smalNeonText-darkturquoise cert1">
+                            <div class="circle"></div>
+                            <div class="text_bx">
+                                <div class="cert_title">웹디자인 기능사</div>
+                                <i onclick="clickCert(1)" class="fa-solid fa-arrow-up-wide-short"></i>
+                                <div class="cert_day">2021-04</div>
+                                <div class="cert-text">aaaaaaaaaaaaaaaaaaaaa</div>
+                            </div>
+                        </div>
+                        <div class="cert_card information-processing smalNeonText-darkturquoise cert2">
+                            <div class="circle"></div>
+                            <div class="text_bx">
+                                <div class="cert_title">정보처리 기능사</div>
+                                <i onclick="clickCert(2)" class="fa-solid fa-arrow-up-wide-short"></i>
+                                <div class="cert_day">2021-05</div>
+                                <div class="cert-text">aaaaaaaaaaaaaaaaaaaaa</div>
+                            </div>
+                        </div>
+                        <div class="cert_card information-equipment smalNeonText-darkturquoise cert3">
+                            <div class="circle"></div>
+                            <div class="text_bx">
+                                <div class="cert_title">정보기기운용 기능사</div>
+                                <i onclick="clickCert(3)" class="fa-solid fa-arrow-up-wide-short"></i>
+                                <div class="cert_day">2021-07</div>
+                                <div class="cert-text">aaaaaaaaaaaaaaaaaaaaa</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -234,6 +264,10 @@
             document.querySelector(`.card${num}`).classList.toggle('is-flipped');
         }
 
+        // cert toggle
+        function clickCert(num) {
+            document.querySelector(`.cert${num}`).classList.toggle('active');
+        }
 
         // form click reload
         function reloadForm() {

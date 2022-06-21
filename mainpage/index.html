@@ -23,8 +23,8 @@
             <ul class="nav">
                 <li><a onclick="link_toggle()" class="neonText" href="#home">HOME</a></li>
                 <li><a onclick="link_toggle()" class="neonText" href="#introduce">INTRODUCE</a></li>
-                <li><a onclick="link_toggle()" class="neonText" href="#pages">PAGES</a></li>
-                <li><a onclick="link_toggle()" class="neonText" href="#skill">SKILL</a></li>
+                <li><a onclick="link_toggle()" class="neonText" href="#portfolio">PORTFOLIO</a></li>
+                <li><a onclick="link_toggle()" class="neonText" href="#skills">SKILLS</a></li>
                 <li><a onclick="link_toggle()" class="neonText" href="#form">FORM</a></li>
                 <li><a onclick="link_toggle()" class="neonText" href="#footer">FOOTER</a></li>
             </ul>
@@ -63,7 +63,7 @@
             <section id="portfolio">
                 <div class="portf_3d">
                     <div class="scene">
-                        <div onclick="clickCard(1)" class="card card1 neonText smalNeonText">
+                        <div onclick="clickCard(1)" class="card card1 neonText smalNeonBox">
                           <div class="card__face card__face--front">
                             <div class="skills">
                                 HTML<br />CSS<br />JavaScript
@@ -84,7 +84,7 @@
                         </div>
                       </div>
                     <div class="scene">
-                        <div onclick="clickCard(2)" class="card card2 neonTextGreen smalNeonTextGreen">
+                        <div onclick="clickCard(2)" class="card card2 neonTextGreen smalNeonBoxGreen">
                             <div class="card__face card__face--front">
                                 <div class="skills">
                                     Vue 
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="scene">
-                        <div onclick="clickCard(3)" class="card card3 neonTextBlue smalNeonTextBlue">
+                        <div onclick="clickCard(3)" class="card card3 neonTextBlue smalNeonBoxBlue">
                             <div class="card__face card__face--front">
                                 <div class="skills">
                                     React
@@ -162,15 +162,32 @@
                     </div>
                 </div>
                 <div class="certificate">
-
+                    
                 </div>
             </section>
 
             <!-- form -->
-            <section class="form">
-                <form action="">
-
-                </form>
+            <section id="form">
+                <div class="login-box smalNeonBoxBlue">
+                    <div class="form-title neonTextBlue">내용을 작성해주세요!!</div>
+                    <form method="POST" data-email="mingim132gguu@gmail.com" action="https://script.google.com/macros/s/AKfycbx4xQInefUw97fWbk4_MLnIzCcdXt7HBABotOCivkUwX-Dlupu5W5pEqR4dm2hAwliOzw/exec">
+                        <div class="name-box user-box smalNeonTextBlue">
+                            <input type="text">
+                            <label>이름</label>
+                        </div>
+                        <div class="email-box user-box smalNeonTextBlue">
+                            <input type="email">
+                            <label>Email</label>
+                        </div>
+                        <div class="message-box user-box ">
+                            <label for="message"></label>
+                            <textarea class="smalNeonTextBlue" id="message" name="message" rows="10">내용</textarea>
+                        </div>
+                        <button class="button-success pure-button button-xlarge send neonTextBlue " onclick="reloadForm()">
+                            전송!
+                        </button>
+                    </form>
+                </div>
             </section>
 
             <!-- footer  -->
@@ -183,7 +200,7 @@
                     </div>
                     <div class="right">
                         <div class="age">사는곳: 연수역 근처</div>
-                        <div class="email">minkugu@naver.com</div>
+                        <div class="my_email">minkugu@naver.com</div>
                     </div>
                 </div>
             </footer>
@@ -215,6 +232,15 @@
         // portfolio -3d card effact
         function clickCard(num) {
             document.querySelector(`.card${num}`).classList.toggle('is-flipped');
+        }
+
+
+        // form click reload
+        function reloadForm() {
+          alert('감사합니다!, 빠른시일내에 연락드리겠습니다.!');
+          setTimeout(function() {
+              location.reload(true);
+          }, 1000);
         }
     </script>
 </body>

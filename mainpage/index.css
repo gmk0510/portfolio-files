@@ -57,24 +57,44 @@ html {
     0 0 100px #0fa,
     0 0 150px #0fa;
 }
-.smalNeonText {
+.smalNeonBox {
     box-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 22px #f09;
 }
-.smalNeonTextGreen {
+.smalNeonBoxGreen {
     box-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 22px #0fa;
 }
-.smalNeonTextBlue {
+.smalNeonBoxBlue {
     box-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 22px rgb(13, 0, 255);
 }
+.smalNeonText {
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #f09;
+}
+.smalNeonTextGreen {
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px #0fa;
+}
+.smalNeonTextBlue {
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 22px rgb(13, 0, 255);
+}
+
+
 
 
 
@@ -181,7 +201,7 @@ html {
     transform: translateX(-50%);
     text-align: center;
     font-size: 4rem;
-    animation: flicker 3s ease-in-out infinite alternate;
+    animation: flicker 3s ease-in-out 1 alternate;
     width: 100%;
 }
 #home .home_box .home_title:nth-child(1) {
@@ -192,7 +212,7 @@ html {
 }
 #home.active .home_box {
     transition: 3s;
-    animation: flickerBlue 3s ease-in-out infinite alternate;
+    animation: flickerBlue 3s ease-in-out 1 alternate;
 }
 
 /* introduce */
@@ -281,7 +301,7 @@ html {
     0 0 61px #f09;
 }
 .card2 .card__face--front{
-    background-image: linear-gradient(120deg, #b9f52f 0%, #0ee92b 100%);
+    background-image: linear-gradient(120deg, #b9f52f 0%, #0c8a1d 100%);
 }
 .card2.is-flipped {
     box-shadow:
@@ -398,10 +418,77 @@ html {
     border-radius: 2rem;
 }
 
+/* form */
+#form {
+    background-image: linear-gradient(315deg, #141e30 0%, #06062b 74%);
+    padding: 3% 0 5% 0;
+}
+.login-box {
+  max-width: 1000px;
+  width: 80%;
+  padding: 40px;
+  margin: 0 auto;
+  background: rgba(0,0,0,.5);
+  border-radius: 10px;
+}
+.login-box .form-title {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
 
+.login-box .user-box {
+  position: relative;
+}
 
+.login-box .user-box input, #form textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  resize: none;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: -1.6rem;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+}
 
-
+.login-box button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: rgba(0,0,0,.5);
+    cursor: pointer;
+    box-shadow: 0 0 3px rgb(98, 92, 230);
+}
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+.login-box button:hover {
+    box-shadow:
+        0 0 4px #fff,
+        0 0 10px rgb(13, 0, 255),
+        0 0 20px rgb(13, 0, 255);
+}
 
 /* footer */
 #footer {
@@ -423,7 +510,11 @@ html {
 }
 #footer .right {
     text-align: right;
+    transform: translateY(70%);
     padding: 0% 2%;
+}
+#footer .left {
+    transform: translateY(70%);
 }
 
 

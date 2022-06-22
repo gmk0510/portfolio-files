@@ -215,11 +215,15 @@ html {
     animation: flickerBlue 3s ease-in-out 1 alternate;
 }
 
+
 /* introduce */
 #introduce {
     padding: 3% 0;
     position: relative;
     background: center / cover no-repeat url("./images/background.jpg");
+}
+#introduce i {
+    animation: noteSlow 3s ease-in-out 10 alternate;
 }
 #introduce .intr_box {
     width: 70%;
@@ -418,7 +422,7 @@ html {
     border-radius: 2rem;
 }
 /* certificate */
-.smalNeonText-darkturquoise {
+.smalNeonBx-darkturquoise {
     box-shadow: 
     0 0 1px #fff,
     0 0 3px #fff,
@@ -450,23 +454,29 @@ html {
 }
 .certificate .cert_bx .cert_card {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 370px;
+    height: 200px;
     padding: 10px;
     border-radius: 5px;
     overflow: hidden;
+    transition: .1s;
+}
+.cert1.active.cert_card, .cert2.active.cert_card, .cert3.active.cert_card {
+    height: 450px;
+    transition: .1s;
 }
 .certificate .cert_bx .cert_card i {
     position: absolute;
     top: 10px; right: 10px;
-    transition: .3s;
+    transition: .1s;
+    cursor: pointer;
 }
 .certificate .cert_bx .cert_card .circle {
     position: absolute;
     top: -20%; right: -20%;
     border-radius: 100%;
     width: 200px; height: 200px; 
-    transition: .3s;
+    transition: .1s;
 }
 .web-design .circle {
     background-color: #537895;
@@ -485,16 +495,42 @@ html {
 }
 .certificate .cert_bx .cert_card .text_bx {
     position: relative;
+    font-size: 1.2rem;
+    transition: .1s;
+}
+.certificate .cert_bx .cert_card .text_bx div {
+    padding: 10px;
+}
+.certificate .cert_bx .cert_card .text_bx .cert_title {
+    font-size: 2rem;
+    font-weight: bold;
 }
 .cert1.active i, .cert2.active i, .cert3.active i{
     transform: rotate(180deg);
-    transition: .3s;
+    transition: .1s;
 }
 .cert1.active .circle, .cert2.active .circle, .cert3.active .circle {
     width: 500px !important;
-    height: 500px !important;
+    height: 1000px !important;
     border-radius: 1px !important;
 }
+.cert-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+.cert1.active .cert-text, .cert2.active .cert-text, .cert3.active .cert-text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+.certificate .cert_bx .cert_card .text_bx .text-bx {
+    border-radius: 5px 5px 0 0;
+    background: rgba(45, 194, 231, 0.555);
+}
+
 
 
 /* form */
@@ -711,6 +747,18 @@ html {
     }    
 }
 
+/* home note */
+@keyframes noteSlow {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 

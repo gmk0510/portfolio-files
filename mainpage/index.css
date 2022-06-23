@@ -283,7 +283,7 @@ html {
   line-height: 2.6rem;
 }
 .card.is-flipped {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) !important; 
 }
 .card__face--front {
   background-color: rgb(3, 3, 3);
@@ -304,6 +304,10 @@ html {
     0 0 42px #f09,
     0 0 61px #f09;
 }
+.card1 .card__face--back a {
+    display: inline-block;
+    margin: 10% 0;
+}
 .card2 .card__face--front{
     background-image: linear-gradient(120deg, #b9f52f 0%, #0c8a1d 100%);
 }
@@ -314,6 +318,19 @@ html {
     0 0 22px #0fa,
     0 0 42px #0fa,
     0 0 61px #0fa;
+}
+.card2 .card__face--back a {
+    position: absolute;
+    top: 20%; left: 50%; 
+    transform: translateX(-50%);
+}
+.card2 .card__face--back .click {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    width: 100%;
 }
 .card3 .card__face--front{
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
@@ -344,7 +361,9 @@ html {
 .links {
     font-size: 1.3rem;
 }
-
+.card1, .card2, .card3 {
+    transition: 1.4s !important;
+}
 /* skill */
 #skills {
     background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);

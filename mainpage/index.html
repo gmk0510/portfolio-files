@@ -18,7 +18,7 @@
         <!-- header -->
         <header id="header">
             <div class="logo">
-                <a class="neonText" href="https://github.com/gmk0510" target="_blank" class="logo"><h2>구민규</h2></a>
+                <a class="neonText" href="https://github.com/gmk0510" target="_blank" class="logo"><h2>구민규.git</h2></a>
             </div>
             <ul class="nav">
                 <li><a onclick="link_toggle()" class="neonText" href="#home">HOME</a></li>
@@ -56,8 +56,6 @@
                             계속 학습하며, 발전하고 싶으며, 빠르게 실력을 쌓고 싶습니다. 
                         </p>
                     </div>
-
-                    <i class="fa-brands fa-itunes-note"></i>
                 </div>
             </section>
 
@@ -79,7 +77,10 @@
                           </div>
                           <div class="card__face card__face--back">
                             <div class="links">
-                                <a href="https://gmk0510.github.io/5-html&css/5-1.html" target="_blank">first clone coding page link</a>
+                                <a href="https://gmk0510.github.io/5-html&css/5-1.html" target="_blank">Responsive web 으로 이동합니다!</a>
+                                <div class="notion">
+                                    <a href="https://www.notion.so/Responsive-web-page-links-clone-coding-ea420dbc242f444aa65047174f9fbcc6">Responsive clone coding site 모음.link</a>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -99,7 +100,10 @@
                                 </div>
                                 <div class="click_btn">클릭해주세요!</div>
                             </div>
-                            <div class="card__face card__face--back">back</div>
+                            <div class="card__face card__face--back">
+                                <a href="https://blq23.netlify.app/" target="_blank"><img src="./images/vue.png" alt="vue-img"></a>
+                                <div class="click">이미지를 클릭하시면 이동합니다.</div>
+                            </div>
                         </div>
                     </div>
                     <div class="scene">
@@ -221,6 +225,7 @@
             <section id="form">
                 <div class="login-box smalNeonBoxBlue">
                     <div class="form-title neonTextBlue">내용을 작성해주세요!!</div>
+                    <div class="form-title neonTextBlue">내용이 저한테 보내져요!</div>
                     <form method="POST" data-email="mingim132gguu@gmail.com" action="https://script.google.com/macros/s/AKfycbx4xQInefUw97fWbk4_MLnIzCcdXt7HBABotOCivkUwX-Dlupu5W5pEqR4dm2hAwliOzw/exec">
                         <div class="name-box user-box smalNeonTextBlue">
                             <input type="text">
@@ -321,26 +326,10 @@
         sr.reveal('.cert2',{delay: 400})
         sr.reveal('.cert3',{interval: 200})
 
-        srlr.reveal('.skill_html', {
-            origin: 'left',
-            duration: 1000,
-            distance: '25rem',
-            delay: 600,
-            reset: true
-        })        
-        srlr.reveal('.skill_css', {
-            origin: 'right',
-            duration: 1000,
-            distance: '25rem',
-            delay: 650
-        })        
-        srlr.reveal('.skill_js', {
-            origin: 'left',
-            duration: 1000,
-            distance: '25rem',
-            delay: 650,
-            reset: true
-        })        
+        sr.reveal('.skill_html',{delay: 200})
+        sr.reveal('.skill_css',{delay: 400})
+        sr.reveal('.skill_js',{interval: 200})
+
     </script>
 </body>
 </html>

@@ -196,9 +196,11 @@ html {
     background: center / cover no-repeat url("./images/background3.png");
 }
 #home .home_box{
-    position: absolute;
-    top: 35%; left: 50%;
-    transform: translateX(-50%);
+    /* position: absolute; */
+    /* top: 35%; left: 50%; */
+    /* transform: translateX(-50%); */
+    margin: 0 auto;
+    padding-top: 20%;
     text-align: center;
     font-size: 4rem;
     animation: flicker 3s ease-in-out 1 alternate;
@@ -209,10 +211,6 @@ html {
 }
 #home .home_box .home_title:nth-child(3) {
     font-size: 3.5rem;
-}
-#home.active .home_box {
-    transition: 3s;
-    animation: flickerBlue 3s ease-in-out 1 alternate;
 }
 
 
